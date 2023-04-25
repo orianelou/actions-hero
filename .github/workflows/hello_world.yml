@@ -18,12 +18,12 @@ jobs:
         run: echo "Hello world"
         shell: bash
     
-    
   goodbye:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: goodbye world
-        run: echo "goodbyw world"
-    
+        run: echo "goodbye world"
+        shell: bash
         
     
