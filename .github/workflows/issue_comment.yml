@@ -24,17 +24,17 @@ jobs:
           reactions: '+1'
           
   cooment-with-api:
-    runs-on: ubuntu-latest
+     runs-on: ubuntu-latest
     steps:
-      - name: create comment with API
-        run: 
-          gh api -X POST \ 
-          http://api.github.com/repos/${ORGANIZANTION}/${REPOSITORY}/issues/${ISSUE_NUMBRE}/comments \
-          -f body='
-          comment from API 
-          '
+      - name: Create comment with API
+        run: |
+          gh api -X POST \
+            https://api.github.com/repos/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments \
+            -f body='
+            Comment but from the API call not action
+            '
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          ORGANIZANTION: ${{github.event.repository.owner.login}}
-          REPOSITORY: ${{ github.event.repository.name}}
-          ISSUE_NUMBRE: ${{ github.event.issue.number }}    
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ORGANIZATION: ${{ github.event.repository.owner.login }} #JSON structure changed
+          REPOSITORY: ${{ github.event.repository.name }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
