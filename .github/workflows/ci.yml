@@ -2,24 +2,19 @@ name: Continuous Integration Workflow
 
 # This workflow is triggered whenever a new PR is created on the main branch
 on:
-  pull_request:
-    branches:
-      - main
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+  # pull_request:
+    #branches:
+     # - main
+  #push:
+  #  branches:
+   #   - main
    
 jobs:
 
   # Run unit tests
   test:
     name: 'Run unit tests'
-    defaults:
-      run:
-        shell: bash
-        # Define the working directory for all run steps in the workflow
-        working-directory: ./web
-    # Specify the OS we want the workflow to run on
     runs-on: ubuntu-latest
     # Define the steps for this job
     steps:
@@ -35,11 +30,6 @@ jobs:
   # Run the linter to check for code style issues
   lint:
     name: 'Run linter'
-    defaults:
-      run:
-        shell: bash
-        # Define the working directory for all run steps in the workflow
-        working-directory: ./web
     runs-on: ubuntu-latest
     steps:    
     - uses: actions/checkout@v2
