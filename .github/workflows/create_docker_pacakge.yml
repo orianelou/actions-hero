@@ -1,16 +1,18 @@
+
+
 name: Create and publish a Docker image
 
 on:
-  push:
-    branches: ['main']
+  release:
+    types: [published]
 
 env:
-  REGISTRY: ghcr.io
+  REGISTRY: containers.HOSTNAME
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build-and-push-image:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted]
     permissions:
       contents: read
       packages: write
