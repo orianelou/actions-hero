@@ -13,7 +13,7 @@ jobs:
       with:
        registry: ghcr.io
        username: ${{ github.actor }}                           
-       passsword: ${{ secrets.GITHUB_TOKEN }}
+       password: ${{ secrets.GITHUB_TOKEN }}
        
     - name: Build the hello-docker Docker image
       run: |
