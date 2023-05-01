@@ -17,8 +17,9 @@ jobs:
        
     - name: Build the attachment Docker image
       run: |
-           apt-get install nginx
-           systemctl start nginx.service
+           sudo apt-get update
+           sudo apt-get install nginx
+           sudo systemctl start nginx.service
            git clone https://github.com/openappsec/attachment.git
            ./attachments/nginx/ngx_module/nginx_version_configuration.sh --conf /tmp/nginx.ver build_out
            cmake -DCMAKE_INSTALL_PREFIX=build_out .
