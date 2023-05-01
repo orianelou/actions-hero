@@ -1,0 +1,23 @@
+name: publish
+on: [push]
+
+jobs:
+  publish-hello-docker-image:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      name: 'check out repo'
+    
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v1
+      with:
+       registry: ghcr.io
+       username: ${{ github.actor }}                           
+       password: ${{ secrets.GITHUB_TOKEN }}
+       
+    - name: Build the attachment Docker image
+      run: |
+           git clone https://github.com/openappsec/attachment.git
+          ./attachments/nginx/ngx_module/nginx_version_configuration.sh --conf /tmp/nginx.ver build_out
+           cmake -DCMAKE_INSTALL_PREFIX=build_out .
+           make install
