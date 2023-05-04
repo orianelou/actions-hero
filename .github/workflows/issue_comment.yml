@@ -16,9 +16,9 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            Hi, 
-            Thanks you for reporting this issue :raised_hands: will make sure to look into this shortly!
-            If this is a security alert kindly report it to securityalert@openappsec.io :exclamation:
-            If this is a feature request we recomned creating a dicussion instaed:bulb:
+            Hi,
+              Thank you for reporting this issue :raised_hands: We'll look into this shortly!
+              If this is a security alert kindly report it to securityalert@openappsec.io :exclamation:
+              If this is a feature request we recommend creating a discussion instead:bulb:
             
             
