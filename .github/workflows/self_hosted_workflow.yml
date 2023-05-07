@@ -20,4 +20,6 @@ jobs:
          docker build . --tag ghcr.io/orianelou/hello-docker-gcr-demo:latest
          docker run ghcr.io/orianelou/hello-docker-gcr-demo:latest
          docker push ghcr.io/orianelou/hello-docker-gcr-demo:latest
+         
+         
   
