@@ -2,7 +2,12 @@ name: 'self hosted build'
 on: workflow_dispatch
 
 jobs:
- build-on-aws-instace:
- runs-on: [self-hosted,linux]
+  build-on-aws-instace:
+    runs-on: [self-hosted,linux]
+    steps:
+     - uses: actions/checkout@v3
+     - name: hello world
+       run: echo "Hello world"
+       shell: bash
  
   
