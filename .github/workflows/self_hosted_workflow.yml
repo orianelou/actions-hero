@@ -5,7 +5,8 @@ jobs:
   build-on-aws-instace:
     runs-on: [self-hosted,linux]
     steps:
-     - uses: actions/checkout@v3
+     - name: get repo     
+       uses: actions/checkout@v3
      - name: hello world
        run: echo "Hello world"
        shell: bash
