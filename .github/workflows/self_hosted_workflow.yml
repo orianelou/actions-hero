@@ -19,12 +19,14 @@ jobs:
       run: |
          mkdir "output"
          touch output/test.tar
+         cd output
+         ls -a
          
     - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
-        name: test.tar
-        path: /output/
+        path: output/test.tar
+                
    
          
          
