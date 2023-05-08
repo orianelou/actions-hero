@@ -24,7 +24,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: test.tar
-        path: /output/test.tar
+        path: /output/
    
          
          
