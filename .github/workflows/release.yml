@@ -15,9 +15,7 @@ jobs:
         uses: actions/checkout@v3
       - name: create asset
         run: |
-          mkdir assets
-          echo 'alpha'    > alpha.html
-          echo 'beta'    > beta.html
+           zip --junk-paths my-artifact Dockerfile
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
