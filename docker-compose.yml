@@ -1,0 +1,26 @@
+version: <Version>
+
+services:
+  open-appsec-agent:
+    image: ghcr.io/openappsec/agent:latest
+    restart: unless-stopped
+    command: /cp-nano-agent --token <Token>
+    ipc: host
+    volumes:
+      - local:/etc/cp/conf
+      - data:/etc/cp/data
+      - logs:/var/log/nano_agent
+
+  open-appsec-nginx-attachment:
+    image: ghcr.io/openappsec/nginx-attachment:latest
+    restart: unless-stopped
+    ipc: host
+    ports:
+      - 80:80
+    volumes:
+      - ./<NGINX config file>:/etc/nginx/conf.d/default.conf 
+      
+volumes:
+  conf:
+  data:
+  logs:
