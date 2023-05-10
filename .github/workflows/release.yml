@@ -10,8 +10,8 @@ jobs:
   build:
     name: Upload Release Asset
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    #permissions:
+      #contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -20,9 +20,12 @@ jobs:
            zip --junk-paths my-artifact Dockerfile
       - name: create release     
         uses: ncipollo/release-action@v1 
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag: v1.0.0.0
+          tag: v2.0.0.0
           name: test new action
+          draft: true
           artifacts: ./my-artifact.zip
           
           
