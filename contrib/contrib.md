@@ -1,5 +1,11 @@
-# open-appsec Contributing Guide
-I appreciate your interest in open-appsec. We welcome everyone that wishes to share their knowledge and expertise to enhance and expand the project.
+# open-appsec Contributing Guide🌴
+Thank you for your interest in open-appsec. We welcome contributions of all kinds, there is no need to do code to be helpful! All of the following tasks are noble and worthy contributions that you can make without coding:
+
+- reporting a secuirty vulnerabilites
+- Reporting a bug
+- Helping a member of the comuinity
+- Notes about our dokumentation 
+- Providnidng feedback and feature requests
 
 Read our [Code of Conduct](./CODE_OF_CONDUCT.md) to keep our community approachable and respectable.
 
@@ -38,7 +44,7 @@ Please [suggest your change via our open-appsec open-source distribution list](m
 
 ## Open Source documentation issues
 
-For reporting or suggesting a change, of any issue detected in the documentation files of our open-source repositories, please use the same guidelines as bug reports/fixes.
+to propuse changes to our [documentation](https://docs.openappsec.io/?utm_medium=web&utm_source=wix&utm_content=top_menu) you can either open a new issue using a relevant [issue form](https://github.com/github/docs/issues/new/choose), or, [contact us via our open-appsec open source distribution list](mailto:opensource@openappsec.io).
 
 # Final Thanks
 We value all efforts to read, suggest changes and/or contribute to our open source files. Thank you for your time and efforts.
