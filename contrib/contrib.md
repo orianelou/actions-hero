@@ -7,7 +7,7 @@ Thank you for your interest in open-appsec. We welcome contributions of all kind
 - Notes about our dokumentation 
 - Providnidng feedback and feature requests
 
-Read our [Code of Conduct](./CODE_OF_CONDUCT.md) to keep our community approachable and respectable.
+Before making any kind of contribution make sur to read our [Code of Conduct](./CODE_OF_CONDUCT.md) to keep our community approachable and respectable.
 
 This guide will provide an overview of the various contribution options' guidelines - from reporting or fixing a bug to suggesting an enhancement.
 
@@ -19,7 +19,7 @@ An internal process will be activated upon determining the validity of a reporte
 
 ## Reporting a bug
 
-**Important - If the bug you wish to report regards a suspicion of a security vulnerability, please refer to the "Reporting security vulnerability" section**
+**Important - If the bug you wish to report regards a suspicion of a security vulnerability, please refer to the [Reporting security vulnerability](#Reporting-security-vulnerabilities) section**
 
 To report a bug, you can either open a new issue using a relevant [issue form](https://github.com/github/docs/issues/new/choose), or, [contact us via our open-appsec open source distribution list](mailto:opensource@openappsec.io).
 
@@ -32,11 +32,12 @@ Please [contact us via our open-appsec open source distribution list](mailto:ope
 ## Contributing code-independent enhancement
 
 For any code-indpendent enhancements (such as docker compose files, or instruction on how to complie on diffrent OSs) please follow the next steps:
-1. Fork the repository to your GitHub account.
-2. Clone your forked repository to your local machine.
-3. Add your contribitions to "Contrib" Folder ib the local copy of the codebase.
-4. Push your changes back to your forked repository.
-5. Open a pull request (PR) against the main branch of the original repository.
+1. Contact us at info@openappsec.io to inform us about your possible contribution. 
+2. Fork the repository to your GitHub account.
+3. Clone your forked repository to your local machine.
+4. Add your contribitions to "Contrib" Folder in the local copy of the codebase.
+5. Push your changes back to your forked repository.
+6. Open a pull request (PR) against the main branch of the original repository.
 
 ## Proposing an enhancement
 
